@@ -12,13 +12,13 @@ if (isset($_GET['username'])) {
 }
 */
 
-if (!file_exists(__DIR__ . '/cache')) {
-    mkdir(__DIR__ . '/cache');
+if (!file_exists(__DIR__ . '/tmp')) {
+    mkdir(__DIR__ . '/tmp');
 }
 
 if (isset($_GET['username'])) {
     $username = htmlspecialchars($_GET['username']);
-    $cache_file = __DIR__ . "/cache/{$username}_repos.json";
+    $cache_file = __DIR__ . "/tmp/{$username}_repos.json";
     $cache_time = 3600; // Tempo de expiração do cache em segundos (1 hora)
 
     // Verifica se o arquivo de cache existe e se ainda é válido
@@ -40,8 +40,8 @@ if (isset($_GET['username'])) {
 
         if ($result !== false) {
             // Armazena o resultado no cache
-            if (!is_dir(__DIR__ . '/cache')) {
-                mkdir(__DIR__ . '/cache', 0755, true);
+            if (!is_dir(__DIR__ . '/tmp')) {
+                mkdir(__DIR__ . '/tmp', 0755, true);
             }
             file_put_contents($cache_file, $result);
         } else {
