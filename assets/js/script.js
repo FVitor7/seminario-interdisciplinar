@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
     $("#githubContent").hide();
-    $('.d-none').removeClass('d-none');
+    $('#githubContent').removeClass('d-none');
   });
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
