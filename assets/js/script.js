@@ -1,5 +1,6 @@
 
-//$("#githubContent").hide();
+$("#githubContent").hide();
+
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
     $("#githubContent").hide();
