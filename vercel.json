@@ -1,16 +1,10 @@
 {
     "functions": {
-      "api/getUser.php": {
-        "runtime": "vercel-php@0.4.4"
-      },
-      "api/getRepos.php": {
-        "runtime": "vercel-php@0.4.4"
-      },
-      "api/teste.php": {
+      "api/**/*.php": {
         "runtime": "vercel-php@0.4.4"
       }
     },
     "routes": [
-      { "src": "/(.*)", "dest": "/api/teste.php" }
+      { "src": "/(.*)", "dest": "/api/$1" }
     ]
   }
