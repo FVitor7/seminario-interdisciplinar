@@ -12,6 +12,10 @@ if (isset($_GET['username'])) {
 }
 */
 
+if (!file_exists(__DIR__ . '/cache')) {
+    mkdir(__DIR__ . '/cache');
+}
+
 if (isset($_GET['username'])) {
     $username = htmlspecialchars($_GET['username']);
     $cache_file = __DIR__ . "/cache/{$username}_repos.json";
