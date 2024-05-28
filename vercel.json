@@ -2,6 +2,9 @@
     "functions": {
       "api/getUser.php": {
         "runtime": "vercel-php@0.4.4"
+      },
+      "api/getRepos.php": {
+        "runtime": "vercel-php@0.4.4"
       }
     }
   }

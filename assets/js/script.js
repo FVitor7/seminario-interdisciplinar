@@ -1,10 +1,10 @@
-console.log('loaded2');
+
 //$("#githubContent").hide();
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
     $("#githubContent").hide();
     const username = document.getElementById('usernameInput').value;
-    fetch('getUser.php?username=' + username)
+    fetch('api/getUser.php?username=' + username)
         .then(response => response.json())
         .then(data => {
             if (data) {
@@ -67,7 +67,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
             //document.getElementById('userInfo').innerHTML = '<p>Erro ao buscar informações.</p>';
         });
         
-    fetch('getRepos.php?username=' + username)
+    fetch('api/getRepos.php?username=' + username)
         .then(response => response.json())
         .then(data => {
             if (data) {
