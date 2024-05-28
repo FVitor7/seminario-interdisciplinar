@@ -1,5 +1,10 @@
 
-$("#githubContent").hide();
+
+
+$(document).ready(function() {
+    $("#githubContent").hide();
+    $('.d-none').removeClass('d-none');
+  });
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
