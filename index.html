@@ -60,7 +60,7 @@
         class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
         id="layout-navbar">
         <div class="navbar-nav-right d-flex align-items-center">
-          <h4 class="fw-bold py-3 mb-0">Visão Geral de um usuário do GitHub</h4>
+          <h4 class="fw-bold py-3 mb-0">Busca de usuários do GitHub</h4>
         </div>
       </div>
 
@@ -81,9 +81,9 @@
                 <i class="bx bx-search fs-2 lh-0"></i>
 
                 <input type="text" id="usernameInput" class="form-control border-0 shadow-none"
-                  placeholder="Username do usuário..." aria-label="Username do usuário..." />
+                  placeholder="Username do usuário..." aria-label="Username do usuário..." required/>
                 <button type="submit" class="btn rounded-pill btn-primary">Pesquisar</button>
-
+                
               </div>
             </div>
           </form>
@@ -126,6 +126,13 @@
               </div>
             </div>
 
+          </div>
+          <div id="userNotFound" class="d-none">
+            <div class="row">
+              <div class="col-12 col-lg-12 order-2 order-md-3 order-lg-2 mb-4">
+                <h4 class="text-danger">Usuário não encontrado!</h4>
+              </div>
+            </div>
           </div>
           <div id="githubContent" class="d-none">
             <div class="row">
